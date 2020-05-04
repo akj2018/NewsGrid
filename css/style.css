@@ -1,0 +1,360 @@
+:root{
+    --primary-color:#c72727;
+    --secondary-color:#f99500;
+    --light-color:#f3f3f3;
+    --dark-color:#333;
+    --max-width:1110px;
+}
+
+.category{
+    --sports-color:#f99500;
+    --ent-color:#a66bbe;
+    --tech-color:#009cff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: var(--light-color);
+    line-height: 1.5rem;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    color: #222;
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Staatliches', cursive;
+    line-height: 2rem;
+    margin: 0.5rem 0;
+}
+
+.container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.category{
+    display: inline-block;
+    color: #fff;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    padding: 0.12rem 0.7rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.065rem;
+}
+
+.category-sports{
+    background: var(--sports-color);
+}
+.category-ent{
+    background: var(--ent-color);
+}
+.category-tech{
+    background: var(--tech-color);
+}
+
+.btn{
+    display: inline-block;
+    border: none;
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-light{
+    background-color: var(--light-color);
+}
+.btn-primary{
+    background-color: var(--primary-color);
+}
+.btn-secondary{
+    background-color: var(--secondary-color);
+}
+
+.card{
+    background-color: white;
+    padding: 1rem;
+}
+
+.bg-dark{
+    background-color: var(--dark-color);
+    color: #fff;
+}
+.bg-primary{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.bg-secondary{
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.py-1{
+    padding: 1.5rem 0;
+}
+.py-2{
+    padding: 2rem 0;
+}
+.py-3{
+    padding: 3rem 0;
+}
+
+.p-1{
+    padding: 1.5rem;
+}
+.p-2{
+    padding: 2rem;
+}
+.p-3{
+    padding: 3rem;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a{
+    color: #fff;
+}
+
+p{
+    margin: 0.5rem 0;
+}
+
+.list li{
+    list-style: none;
+    padding: 0.5rem 0;
+    border-bottom: 2px #444 dotted ;
+    width: 90%;
+}
+
+.list li:last-child{
+    border-bottom: none;
+}
+
+.list li a:hover{
+    color: var(--primary-color) !important;
+}
+
+.l-heading{
+    font-size: 3rem;
+    line-height: 3.2rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Inner page grid container */
+.page-container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 1rem;
+}
+
+.page-container > *:first-child{
+    grid-row: 1 / span 3;
+}
+
+/* Navbar */
+#navbar{
+    background-color: #fff;      
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+#navbar .container{
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    align-items: center;
+    padding: 1rem;
+}
+
+#navbar .container img{
+    width: 180px;
+}
+
+#navbar .container ul {
+    justify-self: end;
+    list-style: none;
+    display: flex;
+}
+
+#navbar .container ul li a{
+    padding: 0.65rem 0.75rem;
+    font-weight: bold;
+    margin: 0.25rem;
+    border-radius: 5px;
+}
+
+#navbar .container ul li a.current{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#navbar .container ul li a:hover{
+    background-color: rgb(214, 203, 203);
+    color: #222;
+}
+
+#navbar .container .social {
+    justify-self: center;
+}
+
+#navbar .container .social a i{
+    color: rgb(156, 129, 129);
+    margin-right: 0.5rem;
+}
+
+#showcase{
+    background: #222;
+    color: #fff;
+    position: relative;
+    padding: 2rem;
+}
+
+#showcase::before{
+    content: '';
+    background: url('../images/featured.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+}
+
+#showcase .showcase-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#showcase .showcase-content{
+    z-index: 1;
+}
+
+#showcase .showcase-content p{
+    margin-bottom: 1rem;
+}
+
+/* Articles Section */
+#articles-section .articles-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;     
+}
+
+#articles-section .articles-container > *:first-child,
+#articles-section .articles-container > *:last-child{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    grid-column: 1 / span 2;
+}
+
+#articles-section .articles-container > *:last-child{
+    grid-column: 2 / span 2;
+}
+
+/* Article Page */
+#article .meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem;
+    background-color: rgb(240, 238, 238);
+}
+
+#article .meta .category{
+    margin: 0.3rem 0.3rem;
+}
+
+/* Footer */
+#footer{
+    background: var(--dark-color);
+    color:#fff
+}
+
+#footer a{
+    color: #fff;
+}
+
+#footer img{
+    width: 150px;
+}
+
+#footer .footer-container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5rem;
+}
+
+
+#footer .footer-container > * h3{
+    letter-spacing: 0.1rem;
+}
+
+#footer .footer-container > *:last-child{
+    background-color: #444;
+    grid-column: 1/ 4 span;
+    padding: 0.3rem;
+    text-align: center;
+    font-size: 0.85rem;
+    word-spacing: 0.1rem;
+}
+
+#footer .footer-container > *:nth-child(2) p{
+    padding-right: 0.44rem;
+}
+
+#footer .footer-container form input[type='email']{
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#footer .footer-container form input[type='submit']{
+    width: 90%;
+}
+
+#footer .footer-container > *:nth-child(4) .btn{
+    font-size: 0.8rem;
+    padding: 0.4rem 1.3rem;
+}
+
